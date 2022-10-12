@@ -1,0 +1,156 @@
+@font-face {
+    font-family: "Poppins";
+    src: url("./fonts/Poppins-Regular.ttf");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Poppins";
+    src: url("./fonts/Poppins-ExtraLight.ttf");
+    font-weight: 200;
+}
+
+@font-face {
+    font-family: "Poppins";
+    src: url("./fonts/Poppins-SemiBold.ttf");
+    font-weight: 600;
+}
+
+:root{
+    --font: "Poppins", sans-serif;
+
+    --Red: hsl(0, 78%, 62%);
+    --Cyan: hsl(180, 62%, 55%);
+    --Orange: hsl(34, 97%, 64%);
+    --Blue: hsl(212, 86%, 64%);
+    --headings-color: hsl(234, 12%, 34%);
+    --text-color: hsl(229, 6%, 66%);
+    --background-color: hsl(0, 0%, 98%);
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: var(--font);
+    font-size: 1.5rem;
+
+    background-color: var(--background-color);
+}
+
+main{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+    gap: 4rem;
+
+    max-width: 35.5rem;
+    margin-block-start: 10vh;
+    margin-block-end: 10vh;
+    margin-inline-start: 2rem;
+    margin-inline-end: 2rem;
+}
+
+.main__header{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+}
+.main__h1{
+    text-align: center;
+    font-size: 2.5rem;
+
+    color: var(--headings-color);
+}
+.main__h1_subtext{
+    font-weight: 200;
+}
+.main__text{
+    margin-top: 2rem;
+
+    text-align: center;
+
+    color: var(--text-color);
+}
+.main__cards{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto auto;
+    gap: 2rem;
+}
+.card__container{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 3rem 4rem auto;
+
+    height: 22rem;
+    padding: 3rem 3rem;
+
+    border-radius: 1rem;
+    box-shadow: 0 1rem 1.5rem 0.2rem rgba(0, 0, 0, 0.137);
+}
+.card__container:nth-child(1){
+    border-top: solid 0.4rem var(--Cyan);
+}
+.card__container:nth-child(2){
+    border-top: solid 0.4rem var(--Red);
+}
+.card__container:nth-child(3){
+    border-top: solid 0.4rem var(--Orange);
+}
+.card__container:nth-child(4){
+    border-top: solid 0.4rem var(--Blue);
+}
+
+.card__title{
+    font-size: 1.8rem;
+    font-weight: 600;
+    
+    color: var(--headings-color);
+}
+.card__text{
+    margin-top: 0.2rem;
+
+    font-size: 1.3rem;
+
+    color: var(--text-color);
+}
+.card__icon{
+    align-self: flex-end;
+    justify-self: end;
+
+    width: 6.5rem;
+    height: 6.5rem;
+}
+
+.card__container:nth-child(1) .card__icon{
+    background-image: url("./images/icon-supervisor.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.card__container:nth-child(2) .card__icon{
+    background-image: url("./images/icon-team-builder.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.card__container:nth-child(3) .card__icon{
+    background-image: url("./images/icon-karma.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.card__container:nth-child(4) .card__icon{
+    background-image: url("./images/icon-calculator.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
